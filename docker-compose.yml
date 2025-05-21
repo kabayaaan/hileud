@@ -15,10 +15,10 @@ services:
     restart: unless-stopped
 
   nginx:
-    image: caddy
-    container_name: caddy
+    image: nginx:stable
+    container_name: nginx
     network_mode: host
     volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile
-      - ./cert:/cert:ro
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./cert:/etc/nginx/ssl/fullchain.pem;
     restart: unless-stopped
