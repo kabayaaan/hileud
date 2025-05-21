@@ -1,5 +1,5 @@
 http://yourdomain.com, https://yourdomain.com {
-    tls /cert/fullchain.crt /cert/private.key
+    tls /cert/fullchain.pem /cert/privkey.pem
     encode gzip
 
     reverse_proxy /trojanws* 127.0.0.1:10003
