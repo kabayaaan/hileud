@@ -1,7 +1,7 @@
 http://yourdomain.com, https://yourdomain.com {
     encode gzip
 
-    reverse_proxy /trojanws* 127.0.0.1:10006
+    reverse_proxy /trojanws* 127.0.0.1:10003
     reverse_proxy /vless* 127.0.0.1:8080
     reverse_proxy /vmess* 127.0.0.1:10002
 }
