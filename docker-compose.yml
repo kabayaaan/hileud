@@ -20,5 +20,5 @@ services:
     network_mode: host
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
-      - ./cert:/etc/nginx/ssl/fullchain.pem;
+      - ./cert/:/etc/nginx/ssl/fullchain.pem;
     restart: unless-stopped
