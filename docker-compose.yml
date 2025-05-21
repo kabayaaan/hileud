@@ -20,4 +20,5 @@ services:
     network_mode: host
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./cert:/cert:ro
     restart: unless-stopped
