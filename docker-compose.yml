@@ -20,5 +20,5 @@ services:
     network_mode: host
     volumes:
       - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
-      - ./cert/xray.pem:/etc/ssl/xray.pem:ro
+      - ./cert/xray.pem:/usr/local/etc/haproxy/certs/xray.pem:ro
     restart: unless-stopped
