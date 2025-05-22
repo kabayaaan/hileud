@@ -13,11 +13,12 @@ services:
     tty: true
     network_mode: host
     restart: unless-stopped
-    
+
   haproxy:
     image: haproxy:2.8
     container_name: haproxy-xray
     network_mode: host
+    user: root
     volumes:
       - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
       - ./cert/xray.pem:/usr/local/etc/haproxy/certs/xray.pem:ro
